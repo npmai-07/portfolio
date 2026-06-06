@@ -1,27 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <style>
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f2f5;
-        }
-        h1 {
-            color: #1a73e8;
-        }
-    </style>
+    <title>Digital Portfolio | Giới thiệu</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Hello World!</h1>
-    <p>This is a demo page to test the GitHub connection.</p>
+    <nav>
+        <a href="index.html" class="nav-brand">Portfolio.</a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Giới thiệu</a></li>
+            <li><a href="projects.html">Dự án</a></li>
+            <li><a href="summary.html">Tổng kết</a></li>
+        </ul>
+        <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+    </nav>
+
+    <main>
+        <section class="hero reveal">
+            <h1>Xin chào, tôi là <span style="color: var(--primary)">[Tên của bạn]</span></h1>
+            <p style="font-size: 1.25rem; max-width: 600px;">Sinh viên ngành [Ngành học của bạn]. Chào mừng bạn đến với Digital Portfolio của tôi cho môn học "Nhập môn Công nghệ số và Ứng dụng Trí tuệ nhân tạo".</p>
+            <div style="margin-top: 2rem; display: flex; gap: 1rem;">
+                <a href="projects.html" class="btn btn-primary">Xem Dự Án</a>
+                <a href="summary.html" class="btn btn-outline">Đọc Tổng Kết</a>
+            </div>
+        </section>
+
+        <section style="margin-top: 5rem;" class="reveal">
+            <h2>Về Bản Thân</h2>
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>👤 Thông tin cơ bản</h3>
+                    <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.5rem; color: var(--text-muted)">
+                        <p><strong>Họ và tên:</strong> [Nhập họ tên]</p>
+                        <p><strong>Ngành học:</strong> [Nhập ngành học]</p>
+                        <p><strong>Sở thích:</strong> [Sở thích 1, Sở thích 2...]</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>🎯 Định hướng phát triển</h3>
+                    <p style="margin-top: 1rem;">[Chia sẻ ngắn gọn về mục tiêu học tập và định hướng phát triển cá nhân của bạn trong tương lai. Ví dụ: Trở thành một chuyên gia phân tích dữ liệu, hay ứng dụng AI vào ngành học của mình...]</p>
+                </div>
+            </div>
+        </section>
+
+        <section style="margin-top: 5rem;" class="reveal">
+            <h2>Mục Tiêu Của Portfolio Này</h2>
+            <div class="card">
+                <p>Portfolio này được xây dựng với các mục tiêu chính:</p>
+                <ul style="margin-left: 1.5rem; margin-top: 1rem; display: flex; flex-direction: column; gap: 0.8rem; color: var(--text-muted)">
+                    <li><strong>Thể hiện các kỹ năng số đã học:</strong> Tổng hợp và áp dụng các kiến thức từ môn học vào một sản phẩm thực tế.</li>
+                    <li><strong>Lưu trữ sản phẩm cá nhân:</strong> Tạo một không gian trực tuyến chuyên nghiệp để lưu trữ, dễ dàng truy cập và chia sẻ các kết quả học tập.</li>
+                    <li><strong>Phát triển thương hiệu cá nhân:</strong> Bước đầu xây dựng hình ảnh chuyên nghiệp trên không gian mạng.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 [Tên của bạn]. Bài tập môn Nhập môn Công nghệ số.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
