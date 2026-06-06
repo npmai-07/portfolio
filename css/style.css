@@ -1,14 +1,14 @@
 :root {
-  --primary: #FF6961;
-  --primary-light: #FFB2AE;
-  --bg-color: #FFFFFF;
+  --primary: #fd475d;
+  --primary-light: #ffccbf;
+  --bg-color: #ffffff;
   --text-main: #333333;
   --text-muted: #777777;
-  --card-bg: #FFFFFF;
-  --border: #F0F0F0;
+  --card-bg: #ffffff;
+  --border: #f0f0f0;
   --radius: 20px;
-  --shadow: 0 8px 24px rgba(185, 214, 243, 0.4);
-  --shadow-hover: 0 15px 35px rgba(255, 105, 97, 0.2);
+  --shadow: 0 8px 24px rgba(174, 212, 213, 0.4);
+  --shadow-hover: 0 15px 35px rgba(253, 71, 93, 0.2);
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --nav-bg: rgba(255, 255, 255, 0.9);
 }
@@ -169,7 +169,7 @@ p { margin-bottom: 1rem; color: var(--text-muted); }
   display: inline-block;
   padding: 0.35rem 0.85rem;
   border-radius: 999px;
-  background-color: #B9D6F3;
+  background-color: #f9cc88;
   color: #333333;
   font-size: 0.875rem;
   font-weight: 600;
