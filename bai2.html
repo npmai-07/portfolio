@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2 - Tìm kiếm & đánh giá thông tin | Digital Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .table-container {
+            overflow-x: auto;
+            margin-top: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            background: var(--card-bg);
+            box-shadow: var(--shadow);
+        }
+        .source-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            min-width: 900px;
+        }
+        .source-table th, .source-table td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border);
+            vertical-align: top;
+            text-align: left;
+        }
+        .source-table th {
+            background-color: var(--primary-light);
+            color: var(--text-main);
+            font-weight: 700;
+        }
+        .source-table tr:last-child td {
+            border-bottom: none;
+        }
+        .source-table tr:nth-child(even) {
+            background-color: rgba(198, 46, 58, 0.02);
+        }
+        [data-theme="dark"] .source-table tr:nth-child(even) {
+            background-color: rgba(255, 138, 132, 0.02);
+        }
+        .source-table tr:hover {
+            background-color: rgba(198, 46, 58, 0.04);
+        }
+        [data-theme="dark"] .source-table tr:hover {
+            background-color: rgba(255, 138, 132, 0.04);
+        }
+        .badge-reliability {
+            display: inline-block;
+            padding: 0.25rem 0.6rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .badge-ratcao { background: rgba(40, 167, 69, 0.15); color: #28a745; border: 1px solid rgba(40, 167, 69, 0.3); }
+        .badge-cao { background: rgba(0, 123, 255, 0.15); color: #007bff; border: 1px solid rgba(0, 123, 255, 0.3); }
+        .badge-kha { background: rgba(255, 193, 7, 0.15); color: #ffc107; border: 1px solid rgba(255, 193, 7, 0.3); }
+        .badge-trungbinh { background: rgba(108, 117, 125, 0.15); color: #6c757d; border: 1px solid rgba(108, 117, 125, 0.3); }
+        
+        .list-pros-cons {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+        .list-pros-cons li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.25rem;
+            line-height: 1.4;
+        }
+        .list-pros-cons li:last-child {
+            margin-bottom: 0;
+        }
+        .list-pros-cons li.pro::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+        }
+        .list-pros-cons li.con::before {
+            content: '✗';
+            position: absolute;
+            left: 0;
+            color: #dc3545;
+            font-weight: bold;
+        }
+        .reference-list {
+            margin-top: 1.5rem;
+            padding-left: 1.5rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+        .reference-list li {
+            margin-bottom: 0.75rem;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="nav-brand">Portfolio.</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Giới thiệu</a></li>
+            <li><a href="projects.html" class="active">Dự án</a></li>
+            <li><a href="summary.html">Tổng kết</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="breadcrumb reveal">
+            <a href="projects.html">📚 Dự án</a>
+            <span class="breadcrumb-sep">›</span>
+            <span>Bài 2</span>
+        </div>
+
+        <div class="detail-header reveal">
+            <span class="badge">Bài 2 - Chương 2.4</span>
+            <h1>🔍 Tìm kiếm và đánh giá thông tin</h1>
+        </div>
+
+        <div class="detail-content">
+            <section class="card reveal" style="margin-bottom: 2rem;">
+                <h2>📖 Những điều em học được ở Chương 2</h2>
+                <p style="line-height: 1.9;">Sau chương học này, em đã trang bị được những kiến thức và kỹ năng thiết yếu để khai thác và quản lý thông tin hiệu quả trong môi trường số. Em có thể phân biệt rõ ràng các khái niệm nền tảng về dữ liệu, thông tin, tri thức, đồng thời nắm vững phương pháp tổ chức, sao lưu và lưu trữ tài liệu khoa học, an toàn thông qua các dịch vụ đám mây. Bên cạnh đó, em đã làm chủ được các chiến lược tìm kiếm thông tin trên Internet, các cơ sở dữ liệu học thuật và biết cách ứng dụng AI để tối ưu hóa quá trình tổng hợp dữ liệu. Quan trọng hơn cả, bài học đã giúp em rèn luyện tư duy phản biện để đánh giá độ tin cậy của nguồn tin, nhận diện tin giả, cũng như nâng cao ý thức tuân thủ đạo đức, tôn trọng bản quyền và trích dẫn tài liệu chuẩn xác, từ đó trở thành một người sử dụng thông tin có trách nhiệm.</p>
+            </section>
+
+            <section class="card reveal" style="margin-bottom: 2rem;">
+                <h2>📋 Tóm tắt quá trình</h2>
+                <p style="line-height: 1.8;">
+                    Em đã thực hiện tìm kiếm, đánh giá và tổng hợp thông tin học thuật phục vụ cho đề tài nghiên cứu: <strong>"Nghiên cứu, thiết kế và ứng dụng của Cơ cấu chấp hành khí nén mềm (Soft Pneumatic Actuators - SPAs)"</strong>. 
+                    Đầu tiên, em sử dụng từ khóa mang tính khái quát là <strong>"soft robotics"</strong> để nắm bắt các khái niệm nền tảng. Sau đó, em thu hẹp phạm vi tìm kiếm bằng từ khóa chuyên sâu hơn là <strong>"pneumatic networks (PneuNets)"</strong> để tiếp cận các thông tin chi tiết về cấu trúc và nguyên lý hoạt động của các cơ cấu chấp hành khí nén mềm.
+                </p>
+                <p style="line-height: 1.8; margin-top: 1rem;">
+                    Các nguồn thông tin được khai thác từ nhiều nhóm nguồn uy tín khác nhau bao gồm:
+                </p>
+                <ul style="margin-left: 1.5rem; margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.5rem; color: var(--text-muted); line-height: 1.6;">
+                    <li><strong>Cơ sở dữ liệu học thuật:</strong> Google Scholar và IEEE Xplore Digital Library.</li>
+                    <li><strong>Tạp chí khoa học chuyên ngành:</strong> Soft Robotics, Advanced Materials.</li>
+                    <li><strong>Sách chuyên khảo:</strong> Các ấn bản từ các nhà xuất bản lớn như Springer và Wiley.</li>
+                    <li><strong>Tài nguyên mở trên Internet:</strong> Harvard Biodesign Lab, CSAIL MIT và cộng đồng mã nguồn mở OpenBionics.</li>
+                </ul>
+                <p style="line-height: 1.8; margin-top: 1rem;">
+                    Thông qua việc lập bảng đánh giá độ tin cậy của 11 tài liệu tiêu biểu dựa trên các tiêu chí khoa học (tác giả, cơ quan, phương pháp, trích dẫn, tính cập nhật) và phân tích kỹ lưỡng ưu/nhược điểm, em đã chọn lọc được những cơ sở lý thuyết vững chắc nhất để phục vụ cho các nghiên cứu tiếp theo về cơ cấu robot mềm.
+                </p>
+            </section>
+
+            <section class="card reveal" style="margin-bottom: 2rem;">
+                <h2>📎 Minh chứng / Sản phẩm</h2>
+                <p style="line-height: 1.8;">Bảng so sánh chi tiết và đánh giá độ tin cậy của 11 nguồn tài liệu học thuật (sách, báo cáo khoa học, tạp chí) được trích xuất từ báo cáo Word của dự án.</p>
+                <div style="margin-top: 1.5rem;">
+                    <a href="minhchung2.html" class="btn btn-primary">📊 Xem Bảng Đánh Giá Chi Tiết</a>
+                </div>
+            </section>
+        </div>
+
+        <div class="detail-nav reveal">
+            <a href="bai1.html" class="btn btn-outline">← Bài trước</a>
+            <a href="bai3.html" class="btn btn-outline">Bài tiếp theo →</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Ngô Phương Mai. My Digital Portfolio</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

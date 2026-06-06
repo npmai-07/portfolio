@@ -14,16 +14,45 @@
             <li><a href="projects.html">Dự án</a></li>
             <li><a href="summary.html">Tổng kết</a></li>
         </ul>
-        <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
     </nav>
+
+    <!-- Hero Banner Carousel -->
+    <div class="banner-carousel" id="bannerCarousel">
+        <div class="carousel-track">
+            <div class="carousel-slide active">
+                <img src="images/banner1.jpg" alt="Không gian làm việc màu hồng">
+                <div class="slide-overlay"></div>
+            </div>
+            <div class="carousel-slide">
+                <img src="images/banner2.png" alt="Góc học tập pastel">
+                <div class="slide-overlay"></div>
+            </div>
+            <div class="carousel-slide">
+                <img src="images/banner3.png" alt="Góc đọc sách ấm cúng">
+                <div class="slide-overlay"></div>
+            </div>
+            <div class="carousel-slide">
+                <img src="images/banner4.png" alt="Không gian sáng tạo">
+                <div class="slide-overlay"></div>
+            </div>
+        </div>
+        <button class="carousel-btn carousel-btn-prev" aria-label="Previous slide">&#10094;</button>
+        <button class="carousel-btn carousel-btn-next" aria-label="Next slide">&#10095;</button>
+        <div class="carousel-dots" id="carouselDots"></div>
+    </div>
 
     <main>
         <section class="hero reveal">
-            <h1>Xin chào, tôi là <span style="color: var(--primary)">Ngô Phương Mai</span></h1>
-            <p style="font-size: 1.25rem; max-width: 600px;">Sinh viên ngành [Ngành học của bạn]. Chào mừng bạn đến với Digital Portfolio của tôi cho môn học "Nhập môn Công nghệ số và Ứng dụng Trí tuệ nhân tạo".</p>
-            <div style="margin-top: 2rem; display: flex; gap: 1rem;">
-                <a href="projects.html" class="btn btn-primary">Xem Dự Án</a>
-                <a href="summary.html" class="btn btn-outline">Đọc Tổng Kết</a>
+            <div class="hero-intro">
+                <div class="hero-text">
+                    <h1>Xin chào, tôi là <span style="color: var(--primary)">Ngô Phương Mai</span></h1>
+                    <p style="font-size: 1.25rem; max-width: 600px;">Sinh viên ngành Kỹ thuật Robot – Trường Đại học Công Nghệ. Chào mừng bạn đến với Digital Portfolio của tôi – nơi lưu giữ hành trình học tập và phát triển bản thân.</p>
+                </div>
+                <div class="hero-portrait">
+                    <div class="portrait-frame">
+                        <img src="images/portrait.jpg" alt="Ảnh chân dung Ngô Phương Mai">
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -34,13 +63,18 @@
                     <h3>👤 Thông tin cơ bản</h3>
                     <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.5rem; color: var(--text-muted)">
                         <p><strong>Họ và tên:</strong> Ngô Phương Mai</p>
-                        <p><strong>Ngành học:</strong> [Nhập ngành học]</p>
-                        <p><strong>Sở thích:</strong> [Sở thích 1, Sở thích 2...]</p>
+                        <p><strong>Ngành học:</strong> Kỹ thuật Robot</p>
+                        <p><strong>Trường:</strong> Đại học Công Nghệ</p>
+                        <p><strong>Sở thích:</strong> Tìm tòi và nghiên cứu cái đẹp</p>
                     </div>
                 </div>
                 <div class="card">
                     <h3>🎯 Định hướng phát triển</h3>
-                    <p style="margin-top: 1rem;">[Chia sẻ ngắn gọn về mục tiêu học tập và định hướng phát triển cá nhân của bạn trong tương lai. Ví dụ: Trở thành một chuyên gia phân tích dữ liệu, hay ứng dụng AI vào ngành học của mình...]</p>
+                    <ul style="margin-left: 1.5rem; margin-top: 1rem; display: flex; flex-direction: column; gap: 0.75rem; color: var(--text-muted)">
+                        <li>Trở thành người có thể <strong>độc lập tài chính</strong>, tự chủ cuộc sống</li>
+                        <li>Có thể <strong>áp dụng kiến thức vào cuộc sống</strong> một cách thiết thực</li>
+                        <li><strong>Ứng dụng AI vào cuộc sống</strong> hàng ngày và công việc chuyên môn</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -59,7 +93,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Ngô Phương Mai. Bài tập môn Nhập môn Công nghệ số.</p>
+        <p>&copy; 2026 Ngô Phương Mai. My Digital Portfolio</p>
     </footer>
 
     <script src="js/main.js"></script>

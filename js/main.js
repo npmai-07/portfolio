@@ -1,26 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Theme toggle functionality
-    const themeBtn = document.getElementById('theme-toggle');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    // Set initial theme based on local storage or system preference
-    if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && prefersDark)) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        if (themeBtn) themeBtn.textContent = '☀️';
-    } else {
-        if (themeBtn) themeBtn.textContent = '🌙';
-    }
-
-    if (themeBtn) {
-        themeBtn.addEventListener('click', () => {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            
-            document.documentElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            themeBtn.textContent = newTheme === 'dark' ? '☀️' : '🌙';
-        });
-    }
+    // Force light pastel theme by removing any stored/active dark theme settings
+    localStorage.removeItem('theme');
+    document.documentElement.removeAttribute('data-theme');
 
     // Scroll reveal animation
     const reveals = document.querySelectorAll('.reveal');
@@ -49,4 +30,62 @@ document.addEventListener('DOMContentLoaded', () => {
             link.classList.add('active');
         }
     });
+
+    // Banner Carousel
+    const carousel = document.getElementById('bannerCarousel');
+    if (carousel) {
+        const slides = carousel.querySelectorAll('.carousel-slide');
+        const dotsContainer = document.getElementById('carouselDots');
+        const prevBtn = carousel.querySelector('.carousel-btn-prev');
+        const nextBtn = carousel.querySelector('.carousel-btn-next');
+        let currentSlide = 0;
+        let autoPlayTimer;
+        const autoPlayDelay = 4000;
+
+        // Create dots
+        slides.forEach((_, i) => {
+            const dot = document.createElement('button');
+            dot.classList.add('carousel-dot');
+            if (i === 0) dot.classList.add('active');
+            dot.setAttribute('aria-label', `Slide ${i + 1}`);
+            dot.addEventListener('click', () => goToSlide(i));
+            dotsContainer.appendChild(dot);
+        });
+
+        const dots = dotsContainer.querySelectorAll('.carousel-dot');
+
+        function goToSlide(index) {
+            slides[currentSlide].classList.remove('active');
+            dots[currentSlide].classList.remove('active');
+            currentSlide = (index + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+            resetAutoPlay();
+        }
+
+        function nextSlide() {
+            goToSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            goToSlide(currentSlide - 1);
+        }
+
+        function resetAutoPlay() {
+            clearInterval(autoPlayTimer);
+            autoPlayTimer = setInterval(nextSlide, autoPlayDelay);
+        }
+
+        prevBtn.addEventListener('click', prevSlide);
+        nextBtn.addEventListener('click', nextSlide);
+
+        // Pause on hover
+        carousel.addEventListener('mouseenter', () => clearInterval(autoPlayTimer));
+        carousel.addEventListener('mouseleave', () => {
+            autoPlayTimer = setInterval(nextSlide, autoPlayDelay);
+        });
+
+        // Start auto-play
+        autoPlayTimer = setInterval(nextSlide, autoPlayDelay);
+    }
 });

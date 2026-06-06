@@ -14,112 +14,101 @@
             <li><a href="projects.html" class="active">Dự án</a></li>
             <li><a href="summary.html">Tổng kết</a></li>
         </ul>
-        <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
     </nav>
 
-    <main>
+    <main class="page-content">
         <div class="reveal">
-            <h1>Các Bài Tập Dự Án</h1>
-            <p style="font-size: 1.125rem; max-width: 700px;">Dưới đây là tập hợp các bài tập đã hoàn thành từ Bài 1 đến Bài 6 trong quá trình học môn Nhập môn Công nghệ số.</p>
+            <h1>Các Dự Án</h1>
+            <p style="font-size: 1.125rem; max-width: 700px;">Tổng hợp các dự án cá nhân và dự án nhóm đã, đang hoàn thành trong quá trình học tập.</p>
         </div>
 
-        <div class="grid grid-2" style="margin-top: 3rem;">
-            <!-- Bài 1 -->
-            <div class="card project-card reveal">
-                <div class="content">
-                    <span class="badge">Bài 1 - Chương 1.4</span>
-                    <h3>Thao tác cơ bản với tệp tin và thư mục</h3>
-                    <div style="margin-top: 1rem; color: var(--text-muted);">
-                        <p><strong>Mục tiêu:</strong> Thiết lập và trình bày cấu trúc thư mục tối ưu, quy tắc đặt tên tệp rõ ràng khoa học.</p>
-                        <p><strong>Tóm tắt quá trình:</strong> [Ghi tóm tắt cách sắp xếp thư mục, quy tắc đặt tên...]</p>
+        <section class="subject-section reveal" style="margin-top: 3rem;">
+            <!-- Subject Card - Click to expand -->
+            <div class="subject-card card" id="subjectCard" onclick="toggleExercises()">
+                <div class="subject-card-content">
+                    <div class="subject-icon">📚</div>
+                    <div class="subject-info">
+                        <h2 style="margin-bottom: 0.25rem;">Nhập Môn Công Nghệ Số</h2>
+                        <p style="margin: 0; font-size: 0.95rem;">6 bài tập thực hành &bull; Chương 1 – Chương 6</p>
                     </div>
-                </div>
-                <div class="project-meta">
-                    <a href="#" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.875rem;">🖼️ Xem Ảnh Minh Họa</a>
+                    <div class="subject-toggle" id="toggleIcon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
                 </div>
             </div>
 
-            <!-- Bài 2 -->
-            <div class="card project-card reveal">
-                <div class="content">
-                    <span class="badge">Bài 2 - Chương 2.4</span>
-                    <h3>Tìm kiếm và đánh giá thông tin</h3>
-                    <div style="margin-top: 1rem; color: var(--text-muted);">
-                        <p><strong>Mục tiêu:</strong> Sử dụng các toán tử tìm kiếm nâng cao và đánh giá tính học thuật của các nguồn tin.</p>
-                        <p><strong>Tóm tắt quá trình:</strong> [Ghi tóm tắt cách sử dụng toán tử AND, OR, filetype..., cách dùng bảng đánh giá...]</p>
-                    </div>
-                </div>
-                <div class="project-meta">
-                    <a href="#" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.875rem;">📄 Bảng Đánh Giá (PDF)</a>
-                </div>
-            </div>
+            <!-- Exercise cards - hidden by default -->
+            <div class="exercises-container" id="exercisesContainer">
+                <div class="project-grid">
+                    <!-- Bài 1 -->
+                    <a href="bai1.html" class="project-link-card card">
+                        <div class="card-icon">📁</div>
+                        <span class="badge">Bài 1 - Chương 1.4</span>
+                        <h3>Thao tác cơ bản với tệp tin và thư mục</h3>
+                        <span class="card-cta">Xem chi tiết bài tập →</span>
+                    </a>
 
-            <!-- Bài 3 -->
-            <div class="card project-card reveal">
-                <div class="content">
-                    <span class="badge">Bài 3 - Chương 3.4</span>
-                    <h3>Viết Prompt hiệu quả cho tác vụ học tập</h3>
-                    <div style="margin-top: 1rem; color: var(--text-muted);">
-                        <p><strong>Mục tiêu:</strong> So sánh hiệu quả giữa Prompt ban đầu và Prompt cải tiến cùng kết quả đầu ra từ AI.</p>
-                        <p><strong>Tóm tắt quá trình:</strong> [Ghi tóm tắt quá trình thử nghiệm và tinh chỉnh prompt...]</p>
-                    </div>
-                </div>
-                <div class="project-meta">
-                    <a href="#" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.875rem;">📝 Báo Cáo Prompt</a>
-                </div>
-            </div>
+                    <!-- Bài 2 -->
+                    <a href="bai2.html" class="project-link-card card">
+                        <div class="card-icon">🔍</div>
+                        <span class="badge">Bài 2 - Chương 2.4</span>
+                        <h3>Tìm kiếm và đánh giá thông tin</h3>
+                        <span class="card-cta">Xem chi tiết bài tập →</span>
+                    </a>
 
-            <!-- Bài 4 -->
-            <div class="card project-card reveal">
-                <div class="content">
-                    <span class="badge">Bài 4 - Chương 4.4</span>
-                    <h3>Sử dụng công cụ hợp tác trực tuyến</h3>
-                    <div style="margin-top: 1rem; color: var(--text-muted);">
-                        <p><strong>Mục tiêu:</strong> Minh chứng việc sử dụng các công cụ quản lý dự án nhóm và cách phối hợp làm việc trực tuyến.</p>
-                        <p><strong>Tóm tắt quá trình:</strong> [Ghi tóm tắt công cụ đã dùng như Trello, Notion, Google Workspace...]</p>
-                    </div>
-                </div>
-                <div class="project-meta">
-                    <a href="#" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.875rem;">🔗 Link Dự Án Nhóm</a>
-                </div>
-            </div>
+                    <!-- Bài 3 -->
+                    <a href="bai3.html" class="project-link-card card">
+                        <div class="card-icon">💬</div>
+                        <span class="badge">Bài 3 - Chương 3.4</span>
+                        <h3>Viết Prompt hiệu quả cho tác vụ học tập</h3>
+                        <span class="card-cta">Xem chi tiết bài tập →</span>
+                    </a>
 
-            <!-- Bài 5 -->
-            <div class="card project-card reveal">
-                <div class="content">
-                    <span class="badge">Bài 5 - Chương 5.4</span>
-                    <h3>AI tạo sinh hỗ trợ sáng tạo nội dung</h3>
-                    <div style="margin-top: 1rem; color: var(--text-muted);">
-                        <p><strong>Mục tiêu:</strong> Trưng bày sản phẩm nội dung số hoàn thiện (hình ảnh, video, bài viết) được AI hỗ trợ tạo ra.</p>
-                        <p><strong>Tóm tắt quá trình:</strong> [Ghi tóm tắt các công cụ AI dùng tạo ảnh, viết bài...]</p>
-                    </div>
-                </div>
-                <div class="project-meta">
-                    <a href="#" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.875rem;">🎨 Xem Sản Phẩm</a>
-                </div>
-            </div>
+                    <!-- Bài 4 -->
+                    <a href="bai4.html" class="project-link-card card">
+                        <div class="card-icon">🤝</div>
+                        <span class="badge">Bài 4 - Chương 4.4</span>
+                        <h3>Sử dụng công cụ hợp tác trực tuyến</h3>
+                        <span class="card-cta">Xem chi tiết bài tập →</span>
+                    </a>
 
-            <!-- Bài 6 -->
-            <div class="card project-card reveal">
-                <div class="content">
-                    <span class="badge">Bài 6 - Chương 6.4</span>
-                    <h3>Sử dụng AI có trách nhiệm</h3>
-                    <div style="margin-top: 1rem; color: var(--text-muted);">
-                        <p><strong>Mục tiêu:</strong> Trình bày bộ nguyên tắc cá nhân về sử dụng AI có trách nhiệm dựa trên các nghiên cứu đã thực hiện.</p>
-                        <p><strong>Tóm tắt quá trình:</strong> [Ghi tóm tắt quá trình hình thành bộ quy tắc...]</p>
-                    </div>
-                </div>
-                <div class="project-meta">
-                    <a href="#" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.875rem;">⚖️ Bộ Nguyên Tắc</a>
+                    <!-- Bài 5 -->
+                    <a href="bai5.html" class="project-link-card card">
+                        <div class="card-icon">🎨</div>
+                        <span class="badge">Bài 5 - Chương 5.4</span>
+                        <h3>AI tạo sinh hỗ trợ sáng tạo nội dung</h3>
+                        <span class="card-cta">Xem chi tiết bài tập →</span>
+                    </a>
+
+                    <!-- Bài 6 -->
+                    <a href="bai6.html" class="project-link-card card">
+                        <div class="card-icon">⚖️</div>
+                        <span class="badge">Bài 6 - Chương 6.4</span>
+                        <h3>Sử dụng AI có trách nhiệm</h3>
+                        <span class="card-cta">Xem chi tiết bài tập →</span>
+                    </a>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Ngô Phương Mai. Bài tập môn Nhập môn Công nghệ số.</p>
+        <p>&copy; 2026 Ngô Phương Mai. My Digital Portfolio</p>
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        function toggleExercises() {
+            const container = document.getElementById('exercisesContainer');
+            const card = document.getElementById('subjectCard');
+            const icon = document.getElementById('toggleIcon');
+            
+            container.classList.toggle('open');
+            card.classList.toggle('expanded');
+            icon.classList.toggle('rotated');
+        }
+    </script>
 </body>
 </html>
