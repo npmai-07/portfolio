@@ -1,25 +1,25 @@
 :root {
-  --primary: #047857; /* Dark Green inspired by the rubric */
-  --primary-light: #10B981;
-  --bg-color: #F8FAFC;
-  --text-main: #1E293B;
-  --text-muted: #64748B;
+  --primary: #FF6961;
+  --primary-light: #FFB2AE;
+  --bg-color: #FFFFFF;
+  --text-main: #333333;
+  --text-muted: #777777;
   --card-bg: #FFFFFF;
-  --border: #E2E8F0;
-  --radius: 16px;
-  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --border: #F0F0F0;
+  --radius: 20px;
+  --shadow: 0 8px 24px rgba(185, 214, 243, 0.4);
+  --shadow-hover: 0 15px 35px rgba(255, 105, 97, 0.2);
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --nav-bg: rgba(255, 255, 255, 0.8);
+  --nav-bg: rgba(255, 255, 255, 0.9);
 }
 
 [data-theme="dark"] {
-  --bg-color: #0F172A;
+  --bg-color: #2D2D2D;
   --text-main: #F8FAFC;
-  --text-muted: #94A3B8;
-  --card-bg: #1E293B;
-  --border: #334155;
-  --nav-bg: rgba(15, 23, 42, 0.8);
+  --text-muted: #CCCCCC;
+  --card-bg: #383838;
+  --border: #444444;
+  --nav-bg: rgba(45, 45, 45, 0.9);
 }
 
 * {
@@ -167,10 +167,10 @@ p { margin-bottom: 1rem; color: var(--text-muted); }
 /* Badge / Tags */
 .badge {
   display: inline-block;
-  padding: 0.25rem 0.75rem;
+  padding: 0.35rem 0.85rem;
   border-radius: 999px;
-  background-color: rgba(4, 120, 87, 0.1);
-  color: var(--primary);
+  background-color: #B9D6F3;
+  color: #333333;
   font-size: 0.875rem;
   font-weight: 600;
   margin-bottom: 1rem;
