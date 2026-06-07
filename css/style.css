@@ -683,12 +683,18 @@ footer {
 /* Mascot walk animation along header bottom border */
 .nav-mascot {
   position: absolute;
-  bottom: 0px;
-  font-size: 1.6rem;
+  bottom: 2px;
+  width: 32px;
+  height: 32px;
   pointer-events: none;
   z-index: 10;
   animation: walkAndBob 30s linear infinite;
-  line-height: 1;
+}
+
+.sparrow-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 @keyframes walkAndBob {

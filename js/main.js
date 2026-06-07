@@ -8,7 +8,25 @@ document.addEventListener('DOMContentLoaded', () => {
     if (nav) {
         const mascot = document.createElement('div');
         mascot.className = 'nav-mascot';
-        mascot.innerHTML = '🤖'; // Cute robot mascot walking along the navbar
+        mascot.innerHTML = `
+            <svg class="sparrow-svg" viewBox="0 0 64 64" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Tail feathers -->
+                <path d="M12 36 C8 38, 4 36, 6 32 C8 28, 12 32, 12 36 Z" fill="#FF8A84" />
+                <path d="M10 40 C6 41, 3 39, 5 36 C7 33, 10 36, 10 40 Z" fill="#FFB2AE" />
+                <!-- Feet -->
+                <path d="M30 46 L30 52 M28 52 L32 52" stroke="#FF8A84" stroke-width="3" stroke-linecap="round" />
+                <path d="M38 46 L38 52 M36 52 L40 52" stroke="#FF8A84" stroke-width="3" stroke-linecap="round" />
+                <!-- Main Body -->
+                <circle cx="36" cy="32" r="18" fill="#FF8A84" />
+                <circle cx="44" cy="26" r="10" fill="#FFB2AE" />
+                <!-- Beak -->
+                <path d="M52 24 L58 27 L52 30 Z" fill="#FFB84D" />
+                <!-- Eye -->
+                <circle cx="46" cy="24" r="2" fill="#2B1515" />
+                <!-- Wing -->
+                <path d="M26 34 C24 38, 28 42, 34 40 C40 38, 38 30, 26 34 Z" fill="#FFD4CF" />
+            </svg>
+        `;
         mascot.setAttribute('aria-hidden', 'true');
         nav.appendChild(mascot);
     }
