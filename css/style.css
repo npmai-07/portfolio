@@ -680,4 +680,80 @@ footer {
   }
 }
 
+/* Mascot walk animation along header bottom border */
+.nav-mascot {
+  position: absolute;
+  bottom: 0px;
+  font-size: 1.6rem;
+  pointer-events: none;
+  z-index: 10;
+  animation: walkAndBob 30s linear infinite;
+  line-height: 1;
+}
+
+@keyframes walkAndBob {
+  0% {
+    left: 2%;
+    transform: scaleX(1) translateY(0);
+  }
+  2.5% { transform: scaleX(1) translateY(-4px); }
+  5% { transform: scaleX(1) translateY(0); }
+  7.5% { transform: scaleX(1) translateY(-4px); }
+  10% { transform: scaleX(1) translateY(0); }
+  12.5% { transform: scaleX(1) translateY(-4px); }
+  15% { transform: scaleX(1) translateY(0); }
+  17.5% { transform: scaleX(1) translateY(-4px); }
+  20% { transform: scaleX(1) translateY(0); }
+  22.5% { transform: scaleX(1) translateY(-4px); }
+  25% { transform: scaleX(1) translateY(0); }
+  27.5% { transform: scaleX(1) translateY(-4px); }
+  30% { transform: scaleX(1) translateY(0); }
+  32.5% { transform: scaleX(1) translateY(-4px); }
+  35% { transform: scaleX(1) translateY(0); }
+  37.5% { transform: scaleX(1) translateY(-4px); }
+  40% { transform: scaleX(1) translateY(0); }
+  42.5% { transform: scaleX(1) translateY(-4px); }
+  45% {
+    left: calc(98% - 30px);
+    transform: scaleX(1) translateY(0);
+  }
+  47.5% {
+    left: calc(98% - 30px);
+    transform: scaleX(-1) translateY(0);
+  }
+  50% {
+    left: calc(98% - 30px);
+    transform: scaleX(-1) translateY(0);
+  }
+  52.5% { transform: scaleX(-1) translateY(-4px); }
+  55% { transform: scaleX(-1) translateY(0); }
+  57.5% { transform: scaleX(-1) translateY(-4px); }
+  60% { transform: scaleX(-1) translateY(0); }
+  62.5% { transform: scaleX(-1) translateY(-4px); }
+  65% { transform: scaleX(-1) translateY(0); }
+  67.5% { transform: scaleX(-1) translateY(-4px); }
+  70% { transform: scaleX(-1) translateY(0); }
+  72.5% { transform: scaleX(-1) translateY(-4px); }
+  75% { transform: scaleX(-1) translateY(0); }
+  77.5% { transform: scaleX(-1) translateY(-4px); }
+  80% { transform: scaleX(-1) translateY(0); }
+  82.5% { transform: scaleX(-1) translateY(-4px); }
+  85% { transform: scaleX(-1) translateY(0); }
+  87.5% { transform: scaleX(-1) translateY(-4px); }
+  90% { transform: scaleX(-1) translateY(0); }
+  92.5% { transform: scaleX(-1) translateY(-4px); }
+  95% {
+    left: 2%;
+    transform: scaleX(-1) translateY(0);
+  }
+  97.5% {
+    left: 2%;
+    transform: scaleX(1) translateY(0);
+  }
+  100% {
+    left: 2%;
+    transform: scaleX(1) translateY(0);
+  }
+}
+
 

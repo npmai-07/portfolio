@@ -3,6 +3,16 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.removeItem('theme');
     document.documentElement.removeAttribute('data-theme');
 
+    // Create and append the mascot to the nav bar
+    const nav = document.querySelector('nav');
+    if (nav) {
+        const mascot = document.createElement('div');
+        mascot.className = 'nav-mascot';
+        mascot.innerHTML = '🤖'; // Cute robot mascot walking along the navbar
+        mascot.setAttribute('aria-hidden', 'true');
+        nav.appendChild(mascot);
+    }
+
     // Scroll reveal animation
     const reveals = document.querySelectorAll('.reveal');
     const revealOnScroll = () => {
